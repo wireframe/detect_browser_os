@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Sonnek"]
   s.date = %q{2010-08-31}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{add css classes to your markup based on the end users browser and operating system.}
   s.email = %q{ryan@socialcast.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -23,13 +23,16 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "test/helper.rb"
+     "detect_browser_os.gemspec",
+     "lib/detect_browser_os.rb",
+     "test/helper.rb",
+     "test/test_detect_browser_os.rb"
   ]
   s.homepage = %q{http://github.com/wireframe/detect_browser_os}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{add css classes to your markup based on the end users browser and operating system.}
   s.test_files = [
     "test/helper.rb",
      "test/test_detect_browser_os.rb"
