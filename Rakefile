@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "detect_browser_os"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{add css classes to your markup based on the end users browser and operating system.}
+    gem.description = %Q{add css classes to your markup based on the end users browser and operating system.}
     gem.email = "ryan@socialcast.com"
     gem.homepage = "http://github.com/wireframe/detect_browser_os"
     gem.authors = ["Ryan Sonnek"]

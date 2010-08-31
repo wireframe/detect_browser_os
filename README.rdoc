@@ -1,6 +1,17 @@
-= browser_os_detect
+= detect_browser_os
 
-Description goes here.
+add css classes to your markup based on the end users browser and operating system.
+
+== Usage
+
+  %html
+    %body{:class => detect_browser_os}
+    ...
+
+renders:
+  <html>
+    <body class="mac firefox3">
+    ...
 
 == Note on Patches/Pull Requests
  
