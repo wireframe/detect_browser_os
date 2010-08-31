@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "browser_os_detect"
+    gem.name = "detect_browser_os"
     gem.summary = %Q{TODO: one-line summary of your gem}
     gem.description = %Q{TODO: longer description of your gem}
     gem.email = "ryan@socialcast.com"
-    gem.homepage = "http://github.com/wireframe/browser_os_detect"
+    gem.homepage = "http://github.com/wireframe/detect_browser_os"
     gem.authors = ["Ryan Sonnek"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -47,7 +47,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "browser_os_detect #{version}"
+  rdoc.title = "detect_browser_os #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
