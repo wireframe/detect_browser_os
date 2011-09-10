@@ -31,9 +31,8 @@ def detect_browser(user_agent = request.user_agent)
       o.join(" ")
     when /webtv/ ;              "gecko"
     when /msie (\d)/ ;          "ie ie#{$1}"
-    when %r{firefox/2} ;        "gecko ff2"
     when %r{firefox/3.5} ;      "gecko ff3 ff3_5"
-    when %r{firefox/3} ;        "gecko ff3"
+    when %r{firefox} ;          "gecko ff#{(ua.match(/firefox\/(\d+)/) || ['',''])[1]}"
     when /konqueror/ ;          "konqueror"
     when /applewebkit\/([\d.]+).? \([^)]*\) ?(?:version\/(\d+))?.*$/
       o = %W(webkit)
