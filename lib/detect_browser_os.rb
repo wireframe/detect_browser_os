@@ -5,10 +5,22 @@ end
 
 def detect_os(user_agent = request.user_agent)
   ua = (user_agent || "").downcase
-
-  ua.include?('mac') || ua.include?('darwin') ? ua.include?('iphone') ? 'iphone' : ua.include?('ipod') ? 'ipod' : 'mac' :
-  ua.include?('x11') || ua.include?('linux') ? 'linux' :
-  ua.include?('win') ? 'win' : nil
+  
+  if ua.include?('iphone')
+    'iphone'
+  elsif ua.include?('ipad')
+    'ipad'
+  elsif ua.include?('ipod')
+    'ipod'
+  elsif ua.include?('mac') || ua.include?('darwin')
+    'mac'
+  elsif ua.include?('x11') || ua.include?('linux')
+    'linux'
+  elsif ua.include?('win')
+    'win'
+  else
+    nil
+  end
 end
 def detect_browser(user_agent = request.user_agent)
   ua = (user_agent || "").downcase
@@ -19,9 +31,8 @@ def detect_browser(user_agent = request.user_agent)
       o.join(" ")
     when /webtv/ ;              "gecko"
     when /msie (\d)/ ;          "ie ie#{$1}"
-    when %r{firefox/2} ;        "gecko ff2"
     when %r{firefox/3.5} ;      "gecko ff3 ff3_5"
-    when %r{firefox/3} ;        "gecko ff3"
+    when %r{firefox} ;          "gecko ff#{(ua.match(/firefox\/(\d+)/) || ['',''])[1]}"
     when /konqueror/ ;          "konqueror"
     when /applewebkit\/([\d.]+).? \([^)]*\) ?(?:version\/(\d+))?.*$/
       o = %W(webkit)
