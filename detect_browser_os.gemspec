@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DetectBrowserOs::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ryan Sonnek"]
-  s.email       = ["TODO: Write your email address"]
+  s.email       = ["ryan@codecrate.com"]
   s.homepage    = "http://github.com/wireframe/detect_browser_os"
   s.summary     = %q{detect end users browser and operating system.}
   s.description = %q{add css classes to your markup based on the end users browser and operating system.}
