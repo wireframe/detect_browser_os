@@ -22,3 +22,6 @@ pkg
 
 # generated gem files
 *.gem
+
+# Bundler files
+Gemfile.lock

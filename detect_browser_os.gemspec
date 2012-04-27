@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+  s.add_development_dependency(%q<rake>, ["0.9.2.2"])
 end
